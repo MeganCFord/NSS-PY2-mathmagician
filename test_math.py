@@ -1,6 +1,5 @@
 from mathmagician import *
 import unittest
-from io import StringIO
 
 class test_mathmagician(unittest.TestCase):
 
@@ -8,6 +7,21 @@ class test_mathmagician(unittest.TestCase):
         self.structure_test = Mathmagician()
         self.assertIsInstance(self.structure_test, Mathmagician)
         self.assertEqual(self.structure_test.number, 0)
+
+    def test_primes(self):
+        self.prime_test = Mathmagician()
+
+        self.prime_test.prime(3)
+        self.assertEqual(self.prime_test.number, 5)
+
+        self.prime_test.prime(1)
+        self.assertEqual(self.prime_test.number, 2)
+
+        self.prime_test.prime(5)
+        self.assertEqual(self.prime_test.number, 11)
+
+        self.prime_test.prime(8)
+        self.assertEqual(self.prime_test.number, 19)
 
     def test_fibonacci(self):
         self.fibonacci_test = Mathmagician()
@@ -39,20 +53,6 @@ class test_mathmagician(unittest.TestCase):
         self.integer_test.integer(8)
         self.assertEqual(self.integer_test.number, 8)
 
-    def test_primes(self):
-        self.prime_test = Mathmagician()
-
-        self.prime_test.prime(3)
-        self.assertEqual(self.prime_test.number, 3)
-
-        self.prime_test.prime(1)
-        self.assertEqual(self.prime_test.number, 1)
-
-        self.prime_test.prime(5)
-        self.assertEqual(self.prime_test.number, 5)
-
-        self.prime_test.prime(8)
-        self.assertEqual(self.prime_test.number, 8)
 
 if __name__ == '__main__':
     unittest.main()
