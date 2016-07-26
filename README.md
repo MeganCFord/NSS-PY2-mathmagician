@@ -23,7 +23,7 @@ NSS Back-End Milestone 2 (Command Line Interface) Exercise 1:
 
 
 ``` 
-git clone __
+git clone https://github.com/MeganCFord/NSS-PY2-mathmagician.git
 cd 1-mathmagician
 python
 ```
